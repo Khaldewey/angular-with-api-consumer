@@ -1,0 +1,13 @@
+<div class="container rounded border bg-light mb-3">
+<div class="mb-3 mt-4">
+  <input class="form-control" type="text" placeholder="Título" aria-label="default input example" [(ngModel)]="titulo">
+</div>
+<div class="mb-3">
+  <input class="form-control" type="text" placeholder="URL da imagem" aria-label="default input example" [(ngModel)]="imagem">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="descricao"></textarea >
+</div>
+<input class="btn btn-primary" type="submit" value="Submit"(click)="postPostagem()">
+</div>
