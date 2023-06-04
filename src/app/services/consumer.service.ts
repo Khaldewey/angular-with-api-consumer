@@ -38,11 +38,15 @@ export class BlogService {
         console.log(`Postagem com ID ${id} foi excluída com sucesso.`);
         // Aqui você pode adicionar qualquer outra lógica necessária após a exclusão da postagem.
         this.location.go(this.location.path());
-        location.reload();
+        setTimeout(() => {
+          location.reload();
+        }, 400);
+
       },
       (error) => {
         console.error(`Ocorreu um erro ao excluir a postagem com ID ${id}:`, error);
         // Aqui você pode tratar o erro de acordo com as necessidades do seu aplicativo.
+
       }
     );
   }

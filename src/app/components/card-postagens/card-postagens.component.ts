@@ -11,6 +11,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class CardPostagensComponent {
   postagem:BlogData
   postagens: any[] = [];
+  location: any;
 
   constructor(
    private sanitizer: DomSanitizer,
@@ -25,7 +26,7 @@ export class CardPostagensComponent {
   }
 
   ngOnInit(): void {
-   this.getPostagem('2')
+
    this.getPostagens()
  }
 

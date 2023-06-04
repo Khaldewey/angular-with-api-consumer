@@ -1,17 +1,14 @@
-<div class="container">
-  <div class="row" >
-    <div class="col text-center rounded border mt-3" style="color :rgb(10, 10, 10);" *ngFor="let p of postagens">
+ <div class="container">
+  <div class="row ">
+    <div class="col text-center rounded border mt-3 position-relative" style="color: rgb(10, 10, 10);" *ngFor="let p of postagens">
+      <img [src]="sanitizeUrl(p.foto)" class="img-fluid" alt="...">
+      <h5>{{p.titulo}}</h5>
+      <p>{{p.descricao}}</p>
 
-
-
-       <button type="button" class="btn-close position-absolute top-0 end-0" aria-label="Close" (click)="deletePostagem(p.id)"></button>
-       <img [src]=" sanitizeUrl(p.foto) " class="img-fluid" alt="...">
-
-        <h5 class=""> {{ p.titulo }} </h5>
-        <p class=""> {{ p.descricao }}</p>
-
+        <i class="bi bi-trash position-absolute " (click)="deletePostagem(p.id.toString())" style="cursor: pointer; bottom: 0; right: 0; font-size: 24px; "></i>
 
 
     </div>
   </div>
 </div>
+
